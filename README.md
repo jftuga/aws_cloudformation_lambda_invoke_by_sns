@@ -20,7 +20,7 @@ Using `Python 3.9` and `AWS CloudFormation`, create a stack which includes:
 ## Configuration
 
 * Configure the variables in the [config.py](config.py) script, such as `region`, `stack_name`, `aws_profile`, `lambda_folder`, `lambda_code`, etc.
-* * Running [lambda-deployment.py](lambda-deployment.py) will substitute the `__SUBNETS__` and `__SECGROUP__` macros in [parameters-template.json](parameters-template.json]) with the default EC2 subnet and security group to create `parameters.json`.  This newly created file will be used by the `aws cloudformation create-stack` command as the `--parameters` option.
+* * Running [lambda-deployment.py](lambda-deployment.py) will substitute the `__SUBNETS__` and `__SECGROUP__` macros in [parameters-template.json](parameters-template.json) with the default EC2 subnet and security group to create `parameters.json`.  This newly created file will be used by the `aws cloudformation create-stack` command as the `--parameters` option.
 * Edit the `__LAYERBUCKET__` place holder in [parameters-template.json](parameters-template.json). This will be the S3 bucket location of your `lambda layer`.
 
 ## VPC Connectivity
