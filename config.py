@@ -6,7 +6,7 @@ stack_name = "LambdaInvokedBySNS"
 region = "Your-AWS-Region"
 
 # A IAM user with admin access
-aws_profile = "cfn-admin"
+aws_profile = "default"
 
 # the main CF definition file
 template = "policy.yml"
