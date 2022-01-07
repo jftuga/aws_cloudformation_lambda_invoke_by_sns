@@ -25,7 +25,7 @@ class VpcInfo:
         self.vpc_id = self.get_vpc_id()
         self.vpc = self.ec2_resource.Vpc(self.vpc_id)
 
-    def get_vpc_id(self) -> str | None:
+    def get_vpc_id(self) -> str:
         if self.vpc_id:
             return self.vpc_id
 
@@ -56,7 +56,7 @@ class VpcInfo:
             security_group_ids.append(sg.id)
         return tuple(security_group_ids)
 
-    def get_security_group_from_name(self, group_name: str) -> str | None:
+    def get_security_group_from_name(self, group_name: str) -> str:
         group_name_lower = group_name.lower()
         for sg in self.vpc.security_groups.all():
             # print(sg.group_name)
