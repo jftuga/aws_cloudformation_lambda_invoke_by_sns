@@ -29,6 +29,22 @@ In order to use a preexisting VPC, [vpc_info.py](vpc_info.py) is used to determi
 
 ## Execution
 
+[lambda-deployment.py](lambda-deployment.py) is the main entry point and allows you to create, destroy, and validate a stack as well as upload a lambda layer to S3.
+
+```
+usage: lambda-deployment.py [-h] {c,d,v,u}
+
+Execute stack ops, lambda upload
+
+positional arguments:
+  {c,d,v,u}   [c]reate the stack; 
+              [d]estroy the stack;
+              [v]alidate stack files;
+              [u]pload lambda zip file to S3 bucket
+```
+
+## Operation
+
 **Upload Lambda Layer**
 
 This repo uses a lambda layer which includes the [Paramiko SSH library](https://www.paramiko.org/). 
