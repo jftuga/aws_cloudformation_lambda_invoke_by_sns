@@ -76,11 +76,19 @@ This command will destroy the stack once you are finished with your project. Thi
 python lambda-deployment.py d
 ```
 
+You can periodically repeat this command to see when the stack has been completely deleted:
+
+```shell
+STACKNAME="LambdaInvokedBySNS"
+aws cloudformation describe-stack-events --stack-name $STACKNAME | \
+jq '.StackEvents | .[] | select(.ResourceStatus|test("DELETE_IN_PROGRESS")) | [.LogicalResourceId,.ResourceStatus]'
+```
+
 ## Checking the lambda function creation status
 
 You can run this command while the stack is being created. It will either return `Pending` or `Active`.
 This is usually the most time consuming task during stack creation.
-You can periodically repeat this command to see when the function becomes `Active`.
+You can periodically repeat this command to see when the function becomes `Active`:
 
 ```shell
 FUNCNAME="lambda_function"
