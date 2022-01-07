@@ -49,7 +49,7 @@ positional arguments:
 
 This repo uses a lambda layer which includes the [Paramiko SSH library](https://www.paramiko.org/). 
 
-Here are instructions on [creating aws lambda layers for Python and third party libraries](lambda_layer/README.md).
+Here are instructions on [creating aws lambda layers for Python and third party libraries](README_LAMBDA_LAYER.md).
 
 You will need to first upload the lambda function located in the [lambda_function](lambda_function/) folder using the command below.
 It will first create a `zip` file that is then uploaded to S3.
