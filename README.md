@@ -128,6 +128,5 @@ sns_publish.exe -s MySubject -m MyMessage -t arn:aws:sns:us-west-2:123456789012:
 * Possibly add CloudFormation `conditions` for a few of the created resources
 * * For example, conditionally create and use `Lambda Layers`
 * git pre-commit hooks
-* Also give the Lambda function access to a S3 bucket
-* Create a customized `EC2 Security Group` resource instead of relying on the default security group *(help wanted)*
-* Further lock down resources *(help wanted)*
+* Create a customized `EC2 Security Group` resource instead of relying on the default security group
+* Further lock down resources
