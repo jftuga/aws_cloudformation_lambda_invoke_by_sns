@@ -80,7 +80,8 @@ You can periodically repeat this command to see when the stack has been complete
 
 ```shell
 STACKNAME="LambdaInvokedBySNS"
-aws cloudformation describe-stack-events --stack-name $STACKNAME | \
+REGION="us-west-2"
+aws cloudformation describe-stack-events --region $REGION --stack-name $STACKNAME | \
 jq '.StackEvents | .[] | select(.ResourceStatus|test("DELETE_IN_PROGRESS")) | [.LogicalResourceId,.ResourceStatus]'
 ```
 
