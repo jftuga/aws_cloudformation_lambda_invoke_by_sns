@@ -29,7 +29,9 @@ In order to use a preexisting VPC, [vpc_info.py](vpc_info.py) is used to determi
 
 ## Execution
 
-[lambda-deployment.py](lambda-deployment.py) is the main entry point and allows you to create, destroy, and validate a stack as well as upload a lambda layer to S3.
+[lambda-deployment.py](lambda-deployment.py) is the main entry point and allows you to create, destroy, and validate a stack. 
+
+It can also upload zipped versions of the lambda function and lambda layer to S3.
 
 ```
 usage: lambda-deployment.py [-h] {c,d,v,u}
