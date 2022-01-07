@@ -1,0 +1,50 @@
+[
+    {
+        "ResolvedValue": "========================== IAM Policies and Roles"
+    },
+    {
+        "ParameterKey": "ManagedPolicyEC2VPCNetInterface",
+        "ParameterValue": "11_EC2_EC2VPCNetInterface"
+    },
+    {
+        "ParameterKey": "IAMRoleLambdaInvokedBySNS",
+        "ParameterValue": "01_Lambda_Invoked_By_SNS"
+    },
+    {
+        "ResolvedValue": "========================== Lambda Layer for a Third Party library"
+    },
+    {
+        "ParameterKey": "LambdaLayerBucketNameKeyName",
+        "ParameterValue": "__LAYERBUCKET__"
+    },
+    {
+        "ParameterKey": "LambdaLayerThirdParty",
+        "ParameterValue": "paramiko-py39"
+    },
+    {
+        "ResolvedValue": "========================== Lambda Function source code"
+    },
+    {
+        "ParameterKey": "LambdaFuncExample",
+        "ParameterValue": "lambda_function"
+    },
+    {
+        "ParameterKey": "LambdaVPCSubnets",
+        "ParameterValue": "__SUBNETS__"
+    },
+    {
+        "ParameterKey": "LambdaVPCSecurityGroups",
+        "ParameterValue": "__SECGROUP__"
+    },
+    {
+        "ResolvedValue": "========================== SNS Topics and Subscriptions"
+    },
+    {
+        "ParameterKey": "SNSDisplayName",
+        "ParameterValue": "SNS for Lambda"
+    },
+    {
+        "ParameterKey": "SNSTopicName",
+        "ParameterValue": "LambdaInvokeBySNS"
+    }
+]

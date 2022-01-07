@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# project specific
+.idea/
+.vscode/
+lambda_function.zip
+parameters.json
